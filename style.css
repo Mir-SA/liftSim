@@ -1,11 +1,7 @@
-/* body {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 10fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-} */
+* {
+    margin: 0;
+    padding: 0;
+}
 
 .buttons {
     display: flex;
@@ -21,12 +17,12 @@
 }
 
 main {
-    margin: 10rem auto;
+    margin: 5rem auto;
     width: 66vw;
 }
 
 .floor {
-    height: 17vh;
+    height: 8.5rem;
     position: relative;
 }
 
@@ -53,25 +49,62 @@ main {
 }
 
 .lift {
+    display: flex;
     content: '';
     position: absolute;
     height: 7rem;
     width: 4.5rem;
-    background: blue;
+    background: burlywood;
     left: 5rem;
-    top: 1.5rem;
+    top: 1.4rem;
     transform: translateY(0);
     transition: transform 0s linear;
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+.left {
+    border-right: 1px solid black;
+}
+
+.open-left-door {
+    transform: translateX(-100%);
+}
+
+.open-right-door {
+    transform: translateX(100%);
+}
+
+.right {
+    border-left: 1px solid black;
+}
+
+.door {
+    content: '';
+    width: 49%;
+    height: 100%;
+    background: grey;
+    transition: transform 2.5s ease-out;
 }
 
 hr {
-    width: 66vw;
+    width: 60vw;
+    margin-left: 4vw;
     position: absolute;
-    top: 8rem;
+    top: 8.5rem;
     border: none;
     height: 3px;
     background: black;
 }
 
-/* transform: translateY(-34vh);
-    transition: transform 3s; */
+@media screen and (max-width: 800px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 50%;
+    }
+}
